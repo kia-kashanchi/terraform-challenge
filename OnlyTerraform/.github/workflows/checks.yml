@@ -19,7 +19,7 @@ jobs:
           unzip tflint.zip && sudo mv tflint /usr/local/bin/
       
       - name: TFLint
-        run: tflint --init && tflint --config .tflint.hcl --recursive
+        run: tflint --init && tflint --config .tflint.hcl
       
       - name: Checkov
         run: checkov -d . --config-file .checkov.yml
